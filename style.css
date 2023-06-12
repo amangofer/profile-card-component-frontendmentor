@@ -1,0 +1,134 @@
+:root {
+    --clr-primary-100: hsl(227, 10%, 46%);
+    --clr-primary-200: hsl(185, 75%, 39%);
+    --clr-primary-300: hsl(229, 23%, 23%);
+    --clr-neutral-100: hsl(0, 0%, 59%);
+
+    --fs-p: 18px;
+
+    --ff: 'Kumbh Sans', sans-serif;
+
+    --fw-100: 400;
+    --fw-200: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--clr-primary-200);
+    background-image:
+        url(images/bg-pattern-top.svg),
+        url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: 
+        right 50vw bottom 40vh,
+        left 46vw top 55vh;
+    font-family: var(--ff);
+}
+
+.container {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.profile-card {
+    background-color: white;
+    min-width: 350px;
+    border-radius: 1rem;
+}
+
+.profile-card > img{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.profile-info {
+    position: relative;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: .5px solid var(--clr-neutral-100);
+}
+
+.user-info > img {
+    position: absolute;
+    top: -50px;
+    outline: 5px solid white;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.user-name {
+    margin-top: -.75rem;
+    font-size: var(--fs-p);
+    font-weight: var(--fw-200);
+    color: var(--clr-primary-300);
+}
+.user-name .age {
+    padding-left: 5px;
+    font-weight: 100;
+    color: var(--clr-primary-100);
+}
+.location{
+    font-size: 14px;
+    color: var(--clr-primary-100);
+    padding-top: .5rem;
+    padding-bottom: 1.5rem;
+}
+
+.profile-stat {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1.35rem .5rem;
+}
+
+.stat {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    padding: .5rem ;
+}
+.stat-count {
+    font-size: var(--fs-p);
+    font-weight: var(--fw-200);
+    color: var(--clr-primary-300);
+}
+
+.stat-type {
+    text-align: center;
+    font-size: 10px;
+    color: var(--clr-primary-100);
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-position: 
+        right 50vw bottom 38vh,
+        left 35vw top 45vh;
+    }
+  }
